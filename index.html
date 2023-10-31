@@ -12,13 +12,13 @@
     <script type="text/jsx">
         const app = document.getElementById("app");
 
-        function Header(){
-            return (<h2>Adding this header through ReactDOM as a nested component</h2>);
+        function Header({title}){
+            return (<h2>{title}</h2>);
         }
         function HomePage() {
             return (
                 <div>
-            <Header />
+            <Header title="Header value passed through parent" />
             </div>);
         }
 
