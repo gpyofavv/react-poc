@@ -11,7 +11,11 @@
     <script type="text/jsx">
         const app = document.getElementById("app");
 
-        ReactDOM.render(<h2>Adding this header through ReactDOM</h2>, app);
+        function Header(){
+            return (<h2>Adding this header through ReactDOM as component</h2>);
+        }
+
+        ReactDOM.render(<Header />, app);
     </script>
 </body>
 </html>
