@@ -1,4 +1,5 @@
 <html>
+
 <body>
     <h1>React POC</h1>
     <div id="app"></div>
@@ -7,15 +8,22 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    
+
     <script type="text/jsx">
         const app = document.getElementById("app");
 
         function Header(){
-            return (<h2>Adding this header through ReactDOM as component</h2>);
+            return (<h2>Adding this header through ReactDOM as a nested component</h2>);
+        }
+        function HomePage() {
+            return (
+                <div>
+            <Header />
+            </div>);
         }
 
-        ReactDOM.render(<Header />, app);
+        ReactDOM.render(<HomePage />, app);
     </script>
 </body>
+
 </html>
