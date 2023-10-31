@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>React POC</h1>
+    <div id="app"></div>
+    <script type="text/javascript">
+        const app = document.getElementById("app");
+
+        const header = document.createElement("h2");
+
+        const headerContent = document.createTextNode('Adding this header through DOM Methods.')
+
+        header.appendChild(headerContent);
+
+        app.appendChild(header);
+    </script>
+</body>
+</html>
