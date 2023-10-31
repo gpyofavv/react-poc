@@ -2,16 +2,16 @@
 <body>
     <h1>React POC</h1>
     <div id="app"></div>
-    <script type="text/javascript">
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    
+    <script type="text/jsx">
         const app = document.getElementById("app");
 
-        const header = document.createElement("h2");
-
-        const headerContent = document.createTextNode('Adding this header through DOM Methods.')
-
-        header.appendChild(headerContent);
-
-        app.appendChild(header);
+        ReactDOM.render(<h2>Adding this header through ReactDOM</h2>, app);
     </script>
 </body>
 </html>
