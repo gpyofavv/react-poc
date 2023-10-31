@@ -12,14 +12,40 @@
     <script type="text/jsx">
         const app = document.getElementById("app");
 
-        function Header({title}){
-            return (<h2>{title}</h2>);
+        function Header2({title}){
+            return (
+                <h2>{title}</h2>
+                );
+        }
+        function Header3({title}){
+            return (
+                <h3>{`Cool ${title}`}</h3>
+                );
+        }
+        function Header4({title}){
+            return (
+                <h4>{createTitle(title)}</h4>
+                );
+        }
+        function Header5({title}){
+            return (
+                <h5>{title ? 'Ternary true' : 'Ternary false'}</h5>
+                );
         }
         function HomePage() {
             return (
                 <div>
-            <Header title="Header value passed through parent" />
+            <Header2 title="Header value passed through parent" />
+            <Header3 title="Header value passed through parent" />
+            <Header4 title="Header value passed through parent" />    
+            <Header5 title="Header value passed through parent" />
             </div>);
+        }
+        function createTitle(title){
+            if (title){
+                return title + '!';
+            }
+            return 'No title';
         }
 
         ReactDOM.render(<HomePage />, app);
